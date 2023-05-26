@@ -1,8 +1,8 @@
 {
-  "name": "todo_list_api",
+  "name": "todo_app_rest_api",
   "version": "1.0.0",
-  "description": "Todo list api for user can create simple todo and fetch all todos",
-  "main": "index.js",
+  "description": "Simple todo app where user create new todo and fetch all todos",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,20 +11,26 @@
     "url": "git+https://github.com/nayanrdeveloper/todo_list.git"
   },
   "keywords": [
-    "todo",
     "MERN",
     "MongoDB",
-    "React",
     "Express",
+    "React",
     "Node.js",
-    "app",
+    "REST",
+    "API",
     "full-stack",
-    "learning"
+    "Todo-list",
+    "todo"
   ],
   "author": "Nayan Radadiya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nayanrdeveloper/todo_list/issues"
   },
-  "homepage": "https://github.com/nayanrdeveloper/todo_list#readme"
+  "homepage": "https://github.com/nayanrdeveloper/todo_list#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1",
+    "uuid": "^9.0.0"
+  }
 }
