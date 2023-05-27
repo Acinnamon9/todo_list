@@ -3,11 +3,17 @@ const Todo = require("../models/todo");
 
 const createNewTodo = async (req, res, next) => {
   try {
-    const { title, comments } = req.body;
+    const { title, comment } = req.body;
+    if (!title || !comments) {
+      return res
+        .status(400)
+        .json({ message: "Title and comments are required" });
+    }
+
     const newTodo = new Todo({
       id: uuidv4(),
       title,
-      comments,
+      comment,
     });
     const savedTodo = await newTodo.save();
     res.status(200).json({ todoResponse: savedTodo });
@@ -32,28 +38,28 @@ const getAllTodo = async (req, res, next) => {
   }
 };
 
-const addCommentToTodo = async (req, res, next) => {
-  try {
-    const { todoId, comment } = req.body;
+// const addCommentToTodo = async (req, res, next) => {
+//   try {
+//     const { todoId, comment } = req.body;
 
-    const todo = await Todo.findById(todoId);
+//     const todo = await Todo.findById(todoId);
 
-    if (!todo) {
-      return res.status(404).json({ message: "Todo not found" });
-    }
+//     if (!todo) {
+//       return res.status(404).json({ message: "Todo not found" });
+//     }
 
-    todo.comments.push({ comment });
-    const updatedTodo = await todo.save();
+//     todo.comments.push({ comment });
+//     const updatedTodo = await todo.save();
 
-    res.status(200).json({ todo: updatedTodo });
-  } catch (error) {
-    console.error("Failed to add comment to todo:", error);
-    res.status(500).json({ message: "Failed to add comment to todo" });
-  }
-};
+//     res.status(200).json({ todo: updatedTodo });
+//   } catch (error) {
+//     console.error("Failed to add comment to todo:", error);
+//     res.status(500).json({ message: "Failed to add comment to todo" });
+//   }
+// };
 
 module.exports = {
   createNewTodo,
   getAllTodo,
-  addCommentToTodo,
+  // addCommentToTodo,
 };

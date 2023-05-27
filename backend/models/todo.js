@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const commentSchema = new Schema({
-  comment: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
+// const commentSchema = new Schema({
+//   comment: {
+//     type: String,
+//     required: true,
+//   },
+//   date: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
 
 const todoSchema = new Schema({
   id: {
@@ -22,7 +22,10 @@ const todoSchema = new Schema({
     type: String,
     required: true,
   },
-  comments: [commentSchema],
+  comment: {
+    type: String,
+    required: true,
+  },
   date: {
     type: Date,
     required: true,
