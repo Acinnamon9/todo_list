@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const useCreateTodo = () => {
   const [todo, setTodo] = useState({
-    title: "",
+    taskName: "",
     comment: "",
   });
   const [loading, setLoading] = useState(false);
@@ -12,13 +12,13 @@ const useCreateTodo = () => {
     setLoading(true);
     try {
       const todoResponse = await axios.post("http://localhost:3000/todo", {
-        title: todo.title,
+        taskName: todo.taskName,
         comment: todo.comment,
       });
       console.log(todoResponse);
       // Reset the form fields
       setTodo({
-        title: "",
+        taskName: "",
         comment: "",
       });
     } catch (error) {

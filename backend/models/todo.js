@@ -1,24 +1,13 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-// const commentSchema = new Schema({
-//   comment: {
-//     type: String,
-//     required: true,
-//   },
-//   date: {
-//     type: Date,
-//     default: Date.now,
-//   },
-// });
-
 const todoSchema = new Schema({
   id: {
     type: String,
     required: true,
     unique: true,
   },
-  title: {
+  taskName: {
     type: String,
     required: true,
   },

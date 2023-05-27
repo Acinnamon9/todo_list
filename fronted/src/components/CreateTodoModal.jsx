@@ -27,11 +27,11 @@ function CreateTodoModal({ isOpen, onClose }) {
               <div className="relative p-6 flex-auto">
                 <form className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full">
                   <InputBox
-                    name={"title"}
-                    htmlFor={"title"}
-                    placeholder="Todo"
-                    label="Todo"
-                    value={todo.title}
+                    name={"taskName"}
+                    htmlFor={"taskName"}
+                    placeholder="Task Name"
+                    label="Task Name"
+                    value={todo.taskName}
                     onChange={handleInputChange}
                   />
                   <InputBox
@@ -55,7 +55,7 @@ function CreateTodoModal({ isOpen, onClose }) {
                 <button
                   className="text-white bg-yellow-500  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                   type="button"
-                  disabled={loading || !todo.comment || !todo.title}
+                  disabled={loading || !todo.comment || !todo.taskName}
                   onClick={handleSubmit}
                 >
                   {loading ? "Creating..." : "Create Todo"}

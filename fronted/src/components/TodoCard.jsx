@@ -1,10 +1,10 @@
 import formatDate from "../utils/formateDate";
 import PropTypes from "prop-types";
 
-function TodoCard({ title, comment, date }) {
+function TodoCard({ taskName, comment, date }) {
   return (
     <div className="px-5 py-3 shadow-card bg-white rounded-md">
-      <h5 className="text-primary-gray text-xl font-semibold">{title}</h5>
+      <h5 className="text-primary-gray text-xl font-semibold">{taskName}</h5>
       <ul className="list-disc text-[#727a74] mt-3">
         <li>{comment}</li>
       </ul>
@@ -18,7 +18,7 @@ function TodoCard({ title, comment, date }) {
 
 TodoCard.propTypes = {
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  taskName: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
 };

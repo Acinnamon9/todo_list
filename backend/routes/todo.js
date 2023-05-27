@@ -1,10 +1,9 @@
 const express = require("express");
-const { createNewTodo, getAllTodo } = require("../controller/todoController");
+const { addtodoCard, getAllTodoCards } = require("../controller/todoController");
 
 const router = express.Router();
 
-router.get("/", getAllTodo);
-router.post("/", createNewTodo);
-// router.post("/:todoId/comments", addCommentToTodo);
+router.get("/", getAllTodoCards);
+router.post("/", addtodoCard);
 
 module.exports = router;

@@ -33,57 +33,12 @@ function Todos() {
               <TodoCard
                 key={todo.id}
                 id={todo.id}
-                title={todo.title}
+                taskName={todo.taskName}
                 comment={todo.comment}
                 date={todo.date}
               />
             );
           })}
-        <div className="px-5 py-3 shadow-card bg-white rounded-md">
-          <h5 className="text-primary-gray text-xl font-semibold">
-            Help of Mical Jackson
-          </h5>
-          <ul className="list-disc text-[#727a74] mt-3">
-            <li>This is a Primary Task</li>
-            <li>This is a Secondary Task</li>
-          </ul>
-        </div>
-        <div className="px-5 py-3 shadow-card bg-white rounded-md">
-          <h5 className="text-primary-gray text-xl font-semibold">
-            Help of Mical Jackson
-          </h5>
-          <ul className="list-disc text-[#727a74] mt-3">
-            <li>This is a Primary Task</li>
-            <li>This is a Secondary Task</li>
-          </ul>
-        </div>
-        <div className="px-5 py-3 shadow-card bg-white rounded-md">
-          <h5 className="text-primary-gray text-xl font-semibold">
-            Help of Mical Jackson
-          </h5>
-          <ul className="list-disc text-[#727a74] mt-3">
-            <li>This is a Primary Task</li>
-            <li>This is a Secondary Task</li>
-          </ul>
-        </div>
-        <div className="px-5 py-3 shadow-card bg-white rounded-md">
-          <h5 className="text-primary-gray text-xl font-semibold">
-            Help of Mical Jackson
-          </h5>
-          <ul className="list-disc text-[#727a74] mt-3">
-            <li>This is a Primary Task</li>
-            <li>This is a Secondary Task</li>
-          </ul>
-        </div>
-        <div className="px-5 py-3 shadow-card bg-white rounded-md">
-          <h5 className="text-primary-gray text-xl font-semibold">
-            Help of Mical Jackson
-          </h5>
-          <ul className="list-disc text-[#727a74] mt-3">
-            <li>This is a Primary Task</li>
-            <li>This is a Secondary Task</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
