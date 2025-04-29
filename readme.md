@@ -10,6 +10,7 @@ The Todo App is a simple application that allows users to create new todo tasks 
 
 * [nodejs](https://nodejs.org/en/download/) for install require package with npm
 * [MongoDB](https://www.mongodb.com/) for todo store in database
+* You need your own URI from MONGO DB preferably Atlas and make a .env file and paste your MONGODB_URI there
 
 ### Technology 
 
