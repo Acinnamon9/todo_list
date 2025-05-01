@@ -22,7 +22,7 @@ The Todo App is a simple application that allows users to create new todo tasks 
 Clone GitHub Repository on your PC
 
 ```bash
-git clone (https://github.com/Acinnamon9/todo_list.git)
+git clone https://github.com/Acinnamon9/todo_list.git
 ```
 
 Start your local mongoDB service
@@ -57,7 +57,7 @@ Clone GitHub Repository on your PC
 
 If you have not clone this repo
 ```bash
-git clone https://github.com/nayanrdeveloper/todo_list
+git clone [https://github.com/nayanrdeveloper/todo_list](https://github.com/Acinnamon9/todo_list.git)
 ```
 
 ```bash
