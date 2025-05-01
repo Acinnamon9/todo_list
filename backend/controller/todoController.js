@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require("uuid");
 const Todo = require("../models/todo");
 
-const addtodoCard = async (req, res, next) => {
+const addTodoCard = async (req, res, next) => {
   try {
     const { taskName, comment } = req.body;
     if (!taskName || !comment) {
@@ -38,8 +38,18 @@ const getAllTodoCards = async (req, res, next) => {
   }
 };
 
+const deleteTodo = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await Todo.findOneAndDelete({ id }); // assuming "id" is your UUID field
+    res.status(200).json({ message: "Todo deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to delete todo" });
+  }
+};
 
 module.exports = {
-  addtodoCard,
+  addTodoCard,
   getAllTodoCards,
+  deleteTodo, // ✅ Fix: Exported properly
 };

@@ -1,9 +1,14 @@
 const express = require("express");
-const { addtodoCard, getAllTodoCards } = require("../controller/todoController");
+const {
+  addTodoCard,
+  getAllTodoCards,
+  deleteTodo,
+} = require("../controller/todoController");
 
 const router = express.Router();
 
 router.get("/", getAllTodoCards);
-router.post("/", addtodoCard);
+router.post("/", addTodoCard);
+router.delete("/:id", deleteTodo); // Directly use destructured function
 
 module.exports = router;

@@ -15,12 +15,12 @@ const todoSchema = new Schema({
     type: String,
     required: true,
   },
-  date: {
-    type: Date,
-    required: true,
-    default: Date.now,
-  },
-});
+  timestamps:{
+    type:Date,
+    default:Date.now
+  }
+  }
+);
 
 const Todo = mongoose.model("Todo", todoSchema);
 
