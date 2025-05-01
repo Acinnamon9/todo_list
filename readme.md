@@ -57,7 +57,7 @@ Clone GitHub Repository on your PC
 
 If you have not clone this repo
 ```bash
-git clone [https://github.com/nayanrdeveloper/todo_list](https://github.com/Acinnamon9/todo_list.git)
+git clone https://github.com/Acinnamon9/todo_list.git
 ```
 
 ```bash
